@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*header styling starts here*/
@@ -34,4 +35,48 @@ header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
     font-size: 22px;
+}
+
+/*end header styling*/
+
+/*footer styling starts here*/
+
+footer {
+    background:rgb(119, 119, 190);
+    width: 100%;
+    padding: 20px 15px;
+}
+footer h3 {
+    display: inline;
+    color:rgb(218, 218, 233);
+    font-size: 20px;
+    margin: 0;
+    padding: 30px;
+}
+
+/*end footer styling*/
+
+/*section styling starts here*/
+
+section {
+    padding: 60px;
+}
+
+/*section styling end/
+
+/*hero style starts here*/
+
+.hero {
+    background-image: url("../images/hero-img.jpeg");
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero h2 {
+    color:rgb(218, 218, 233);
+    position: absolute;
+    font-size: 30px;
+    bottom: 50px;
+    right: 130px;
 }
