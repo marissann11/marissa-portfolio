@@ -60,6 +60,12 @@ footer h3 {
 
 section {
     padding: 60px;
+    overflow: auto;
+}
+section h2 {
+    font-size: 35px;
+    color:rgb(119, 119, 190);
+    margin-bottom: 15px;
 }
 
 /*section styling end/
@@ -75,8 +81,26 @@ section {
 }
 .hero h2 {
     color:rgb(218, 218, 233);
+    background-color:rgb(119, 119, 190);
     position: absolute;
     font-size: 30px;
     bottom: 50px;
     right: 130px;
+    padding: 15px;
+    border: solid 3px rgb(119, 119, 190);
+}
+
+/*end hero styling*/
+
+/*about me section styling start*/
+
+.intro img {
+    width: 15%;
+    float: left;
+    padding: 20px;
+}
+.intro p {
+    margin: 0, auto;
+    padding: 20px 0 50px 75px;
+    width: 100%;
 }
