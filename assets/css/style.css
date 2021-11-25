@@ -8,7 +8,10 @@
 
 header {
     padding: 20px 35px;
-    background-color: rgb(119, 119, 190)
+    background-color: rgb(119, 119, 190);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 header h1 {
     font-weight: bold;
@@ -26,6 +29,10 @@ header nav {
     margin: 7px 0;
 }
 header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
 }
 header nav ul li {
@@ -36,6 +43,12 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 22px;
 }
+header nav ul li a:hover {
+    background:rgb(218, 218, 233);
+    font-weight: lighter;
+    color: rgb(119, 119, 190);
+    padding: 10px 15px;
+}
 
 /*end header styling*/
 
@@ -45,6 +58,9 @@ footer {
     background:rgb(119, 119, 190);
     width: 100%;
     padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 footer h3 {
     display: inline;
@@ -103,4 +119,37 @@ section h2 {
     margin: 0, auto;
     padding: 20px 0 50px 75px;
     width: 100%;
+    font-size: 20px;
+    color:rgb(119, 119, 190);
+    line-height: 1.5;
+}
+
+/*end about me styling*/
+
+/*my work styling starts here*/
+
+.run-buddy {
+    background-image: url(../images/run-buddy.jpeg);
+}
+.horiseon-challenge {
+    background-image: url(../images/challenge-one.png);
+}
+.fake-challenge {
+    background-image: url(../images/fake-challenge.jpg);
+}
+
+/*contact info styling*/
+
+.contact-info {
+    font-size: 20px;
+    color:rgb(119, 119, 190);
+    display: inline; 
+}
+.contact ul li {
+    text-decoration: none;
+    display: inline;
+    font-size: 20px;
+    float: right;
+    padding: 20px;
+    justify-content: space-around;
 }
