@@ -1,3 +1,7 @@
+:root {
+    --primary-color: (119, 119, 190);
+    --secondary-color: (218, 218, 233);
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +12,7 @@
 
 header {
     padding: 20px 35px;
-    background-color: rgb(119, 119, 190);
+    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -16,13 +20,13 @@ header {
 header h1 {
     font-weight: bold;
     font-size: 36px;
-    color:rgb(218, 218, 233);
+    color:var(--secondary-color);
     margin: 0;
     display: inline;
 }
 header a {
     text-decoration: none;
-    color:rgb(218, 218, 233);
+    color:var(--secondary-color);
 }
 header nav {
     float: right;
@@ -44,9 +48,9 @@ header nav ul li a {
     font-size: 22px;
 }
 header nav ul li a:hover {
-    background:rgb(218, 218, 233);
+    background:var(--secondary-color);
     font-weight: lighter;
-    color: rgb(119, 119, 190);
+    color: var(--secondary-color);
     padding: 10px 15px;
 }
 
@@ -63,7 +67,7 @@ footer {
 }
 footer h3 {
     display: inline;
-    color:rgb(218, 218, 233);
+    color:var(--primary-color);
     font-size: 20px;
     margin: 0;
     padding: 20px;
@@ -79,7 +83,7 @@ section {
 }
 section h2 {
     font-size: 35px;
-    color:rgb(119, 119, 190);
+    color:var(--primary-color);
     margin-bottom: 15px;
 }
 
@@ -97,82 +101,14 @@ section h2 {
     flex-wrap: wrap;
 }
 .hero h2 {
-    color:rgb(218, 218, 233);
-    background-color:rgb(119, 119, 190);
+    color:var(--secondary-color);
+    background-color:var(--primary-color);
     position: absolute;
     font-size: 30px;
     bottom: 50px;
     right: 130px;
     padding: 15px;
-    border: solid 3px rgb(119, 119, 190);
+    border: solid 3px var(--primary-color);
 }
 
 /*end hero styling*/
-
-/*about me section styling start*/
-
-.about-me {
-    display: flex;
-    flex-wrap: flex;
-}
-.box-caption {
-    flex: 1;
-    border-right: 1px solid var(--primary-color);
-}
-.box-image img {
-    flex: 1;
-    height: 300px;
-    width: 300px;
-}
-.box-about {
-    flex: 1;
-    justify-content: flex-end;
-}
-
-/*end about me styling*/
-
-/*my work styling starts here*/
-
-.work-container {
-    display: flex;
-    flex-wrap: flex;
-    justify-content: space-around;
-}
-.left-box {
-    flex: 2;
-}
-.box-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.box-one {
-    flex-grow: 3;
-}
-.box-two {
-    flex-grow: 1;
-}
-.box-three {
-    flex-grow: 1;
-}
-
-.work-container img {
-    filter: grayscale(100%);
-}
-.work-container img:hover{
-    filter: grayscale(10%);
-}
-
-/*contact info styling*/
-
-.contact ul li {
-    text-decoration: none;
-    display: inline;
-    font-size: 20px;
-    float: right;
-    padding: 20px;
-    justify-content: space-around;
-    font-size: 20px;
-    color:rgb(119, 119, 190);
-    display: inline; 
-}
