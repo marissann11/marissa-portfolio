@@ -115,18 +115,21 @@ section h2 {
     display: flex;
     flex-wrap: flex;
 }
-.box-caption {
+.about-me >.box-caption {
     flex: 1;
-    border-right: 1px solid var(--primary-color);
 }
-.box-image img {
+.about-me >.box-image img {
     flex: 1;
+    margin: left;
     height: 300px;
     width: 300px;
 }
-.box-about {
+.about-me >.box-about {
+    padding: 20px;
     flex: 1;
-    justify-content: flex-end;
+}
+.about-me >div {
+    flex: 1;
 }
 
 /*end about me styling*/
@@ -134,45 +137,60 @@ section h2 {
 /*my work styling starts here*/
 
 .work-container {
-    display: flex;
-    flex-wrap: flex;
-    justify-content: space-around;
-}
-.left-box {
-    flex: 2;
-}
-.box-content {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.box-one {
-    flex-grow: 3;
+.work-container >.box-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    object-fit: cover;
 }
-.box-two {
+.work-container >.box-one {
+    flex: 5;
+    flex-wrap: wrap;
+}
+.work-container >.box-two {
     flex-grow: 1;
+    flex-wrap: wrap;
 }
-.box-three {
-    flex-grow: 1;
-}
-
 .work-container img {
+    display: flex;
     filter: grayscale(100%);
+    border: 3px solid black;
+    border-radius: 8px;
 }
 .work-container img:hover{
     filter: grayscale(10%);
 }
+.work-container div p {
+    font-size: 25px;
+    color:rgb(119, 119, 190);
+}
 
 /*contact info styling*/
 
-.contact ul li {
+.contact-me {
+    display:flex;
+    flex-wrap: wrap;
+}
+.contact-me h2 {
+    flex:1;
+}    
+.contact-links {
+    flex:3;
+    justify-content: space-around;
+}
+.contact-links ul li {
+    list-style:none;
+}
+.contact-links ul li a{
     text-decoration: none;
-    display: inline;
     font-size: 20px;
-    float: right;
     padding: 20px;
     justify-content: space-around;
     font-size: 20px;
     color:rgb(119, 119, 190);
-    display: inline; 
+    list-style: none;
 }
