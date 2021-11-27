@@ -1,14 +1,22 @@
+:root {
+    --primary-color: #0f2026;
+    --secondary-color: #a68077;
+    --tertiary-color: #394d59;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    font-family: Optima, sans-serif;
 }
 
 /*header styling starts here*/
 
 header {
     padding: 20px 35px;
-    background-color: rgb(119, 119, 190);
+    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -16,13 +24,13 @@ header {
 header h1 {
     font-weight: bold;
     font-size: 36px;
-    color:rgb(218, 218, 233);
+    color:var(--secondary-color);
     margin: 0;
     display: inline;
 }
 header a {
     text-decoration: none;
-    color:rgb(218, 218, 233);
+    color:var(--secondary-color);
 }
 header nav {
     float: right;
@@ -44,10 +52,11 @@ header nav ul li a {
     font-size: 22px;
 }
 header nav ul li a:hover {
-    background:rgb(218, 218, 233);
+    background:var(--tertiary-color);
     font-weight: lighter;
-    color: rgb(119, 119, 190);
+    color: var(--secondary-color);
     padding: 10px 15px;
+    border-radius: 10px;
 }
 
 /*end header styling*/
@@ -55,7 +64,7 @@ header nav ul li a:hover {
 /*footer styling starts here*/
 
 footer {
-    background:rgb(119, 119, 190);
+    background:var(--primary-color);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -63,7 +72,7 @@ footer {
 }
 footer h3 {
     display: inline;
-    color:rgb(218, 218, 233);
+    color:var(--secondary-color);
     font-size: 20px;
     margin: 0;
     padding: 20px;
@@ -79,7 +88,7 @@ section {
 }
 section h2 {
     font-size: 35px;
-    color:rgb(119, 119, 190);
+    color:var(--primary-color);
     margin-bottom: 15px;
 }
 
@@ -97,39 +106,40 @@ section h2 {
     flex-wrap: wrap;
 }
 .hero h2 {
-    color:rgb(218, 218, 233);
-    background-color:rgb(119, 119, 190);
+    color:var(--secondary-color);
+    background-color:var(--primary-color);
     position: absolute;
     font-size: 30px;
     bottom: 50px;
     right: 130px;
     padding: 15px;
-    border: solid 3px rgb(119, 119, 190);
+    border: solid 3px var(--tertiary-color);
+    border-radius: 10px;
 }
 
 /*end hero styling*/
 
 /*about me section styling start*/
 
-.about-me {
+.about-container {
     display: flex;
-    flex-wrap: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.about-me >.box-caption {
-    flex: 1;
+.about-box1 {
+    flex: .75;
+    border-right: 5px solid var(--primary-color);
 }
-.about-me >.box-image img {
+.about-box2 img {
     flex: 1;
-    margin: left;
     height: 300px;
     width: 300px;
-}
-.about-me >.box-about {
     padding: 20px;
-    flex: 1;
 }
-.about-me >div {
-    flex: 1;
+.about-box3 {
+    flex: 2;
+    justify-content: flex-end;
+    padding: 20px 0 0 0;
 }
 
 /*end about me styling*/
@@ -137,60 +147,78 @@ section h2 {
 /*my work styling starts here*/
 
 .work-container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.work-container >.box-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    object-fit: cover;
+    justify-content: space-between;
 }
-.work-container >.box-one {
-    flex: 5;
-    flex-wrap: wrap;
+.work-box1 {
+    flex: 2.18;
+    border-right: 5px solid var(--primary-color);
 }
-.work-container >.box-two {
+.work-box2 {
     flex-grow: 1;
-    flex-wrap: wrap;
+}
+.workbox3 {
+    flex-grow: 1;
+}
+.work-box4 {
+    flex-grow: 1;
 }
 .work-container img {
-    display: flex;
     filter: grayscale(100%);
-    border: 3px solid black;
-    border-radius: 8px;
+    border: solid 10px var(--tertiary-color);
+    border-radius: 10px;
+    margin: 50px;
 }
 .work-container img:hover{
-    filter: grayscale(10%);
+    filter: grayscale(20%);
 }
-.work-container div p {
+.work-container p {
     font-size: 25px;
-    color:rgb(119, 119, 190);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /*contact info styling*/
 
-.contact-me {
-    display:flex;
-    flex-wrap: wrap;
-}
-.contact-me h2 {
-    flex:1;
-}    
-.contact-links {
-    flex:3;
-    justify-content: space-around;
-}
-.contact-links ul li {
-    list-style:none;
-}
-.contact-links ul li a{
+.contact-container a {
     text-decoration: none;
-    font-size: 20px;
-    padding: 20px;
+    color:var(--secondary-color);
+}
+.contact-container nav {
+    width: 100%;
+    float: right;
+    margin: 7px 0;
+}
+.contact-container nav ul {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    font-size: 20px;
-    color:rgb(119, 119, 190);
+    align-items: center;
     list-style: none;
+}
+.contact-container nav ul li {
+    display: inline;
+}
+.contact-container nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+}
+.contact-container nav ul li a:hover {
+    background:var(--tertiary-color);
+    font-weight: lighter;
+    color: var(--secondary-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.contact-box1 {
+    flex: 1;
+    border-right: 5px solid var(--primary-color);
+}
+.contact-box2 {
+    flex: 1.5;
 }
