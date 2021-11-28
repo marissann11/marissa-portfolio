@@ -121,13 +121,18 @@ section h2 {
 
 /*about me section styling start*/
 
+.about-me {
+    width:80%;
+    display:flex;
+    flex-wrap: wrap;
+}
 .about-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 .about-box1 {
-    flex: .75;
+    width: 20%;
     border-right: 5px solid var(--primary-color);
 }
 .about-box2 img {
@@ -149,24 +154,19 @@ section h2 {
 .work-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 .work-box1 {
-    flex: 2.18;
+    width: 20%;
     border-right: 5px solid var(--primary-color);
 }
-.work-box2 {
-    flex-grow: 1;
-}
-.workbox3 {
-    flex-grow: 1;
-}
-.work-box4 {
-    flex-grow: 1;
+.work.boxes {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .work-container img {
     filter: grayscale(100%);
-    border: solid 10px var(--tertiary-color);
+    border: solid 5px var(--tertiary-color);
     border-radius: 10px;
     margin: 50px;
 }
@@ -184,29 +184,26 @@ section h2 {
 
 /*contact info styling*/
 
-.contact-container a {
-    text-decoration: none;
-    color:var(--secondary-color);
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
 }
-.contact-container nav {
-    width: 100%;
-    float: right;
+.contact-box2 {
+    width: 80%;
     margin: 7px 0;
 }
 .contact-container nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
     list-style: none;
 }
-.contact-container nav ul li {
-    display: inline;
-}
 .contact-container nav ul li a {
-    margin: 0 30px;
+    margin: 0 10px;
     font-weight: lighter;
     font-size: 22px;
+    text-decoration: none;
+    color:var(--secondary-color);
 }
 .contact-container nav ul li a:hover {
     background:var(--tertiary-color);
@@ -216,9 +213,6 @@ section h2 {
     border-radius: 10px;
 }
 .contact-box1 {
-    flex: 1;
+    width: 20%;
     border-right: 5px solid var(--primary-color);
-}
-.contact-box2 {
-    flex: 1.5;
 }
