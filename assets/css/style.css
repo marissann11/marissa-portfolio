@@ -167,10 +167,19 @@ section h2 {
     border-right: 5px solid var(--primary-color);
 }
 .work-container img {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-around;
     filter: grayscale(100%);
     border: solid 5px var(--tertiary-color);
     border-radius: 5px;
-    margin: 50px;
+    margin: 20px;
+}
+.work-boxes:first-child img {
+    max-width:100%;
+    width: 750px;
+    height: 315px;
 }
 .work-container img:hover{
     filter: grayscale(15%);
