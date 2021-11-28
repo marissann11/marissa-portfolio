@@ -154,32 +154,38 @@ section h2 {
 .work-container {
     display: flex;
     flex-wrap: wrap;
+    flex: 0 0 80%;
+}
+.work-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 5;
 }
 .work-box1 {
     width: 20%;
     border-right: 5px solid var(--primary-color);
 }
-.work.boxes {
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-}
 .work-container img {
     filter: grayscale(100%);
     border: solid 5px var(--tertiary-color);
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 50px;
 }
 .work-container img:hover{
-    filter: grayscale(20%);
+    filter: grayscale(15%);
 }
-.work-container p {
+.subtitle {
+    position: absolute !important;
     font-size: 25px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    position: absolute;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 999;
+}
+.relative {
+    position: relative !important;
 }
 
 /*contact info styling*/
