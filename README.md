@@ -14,7 +14,7 @@ This webpage consists of a header, short bio, picture of me, links to my work, a
 https://marissann11.github.io/marissa-portfolio/
 
 # Screenshot
-![Screenshot](./marissa-portfolio/assets/images/final-screenshot.png "Screenshot")
+![Screenshot](./marissa-portfolio/assets/images/final-screenshot.png?raw=true "Screenshot")
 
 # Contribution
 Made with &hearts; by Marissa Wilhite
