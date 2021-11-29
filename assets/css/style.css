@@ -20,6 +20,8 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
 }
 header h1 {
     font-weight: bold;
@@ -114,7 +116,7 @@ section h2 {
     right: 130px;
     padding: 15px;
     border: solid 3px var(--tertiary-color);
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 /*end hero styling*/
@@ -137,7 +139,7 @@ section h2 {
 }
 .about-box2 img {
     flex: 1;
-    height: 300px;
+    height: 419px;
     width: 300px;
     padding: 20px;
 }
@@ -154,32 +156,48 @@ section h2 {
 .work-container {
     display: flex;
     flex-wrap: wrap;
+    flex: 0 0 80%;
+}
+.work-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 5;
 }
 .work-box1 {
     width: 20%;
     border-right: 5px solid var(--primary-color);
 }
-.work.boxes {
-    width: 80%;
+.work-container img {
     display: flex;
     flex-wrap: wrap;
-}
-.work-container img {
+    max-width: 100%;
+    justify-content: space-around;
     filter: grayscale(100%);
     border: solid 5px var(--tertiary-color);
-    border-radius: 10px;
-    margin: 50px;
+    border-radius: 5px;
+    margin: 9px;
+}
+.work-boxes:first-child img {
+    max-width:100%;
+    width: 750px;
+    height: 315px;
 }
 .work-container img:hover{
-    filter: grayscale(20%);
+    filter: grayscale(15%);
 }
-.work-container p {
-    font-size: 25px;
-    background-color: var(--primary-color);
+.subtitle {
+    position: absolute !important;
+    left: 9px;
+    bottom: 11px;
+    font-size: 23px;
+    background-color: var(--tertiary-color);
     color: var(--secondary-color);
-    position: absolute;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 3px;
+    z-index: 999;
+}
+.relative {
+    position: relative !important;
 }
 
 /*contact info styling*/
@@ -215,4 +233,53 @@ section h2 {
 .contact-box1 {
     width: 20%;
     border-right: 5px solid var(--primary-color);
+}
+
+/*end contact me styling*/
+
+/*begin styling for smaller screen sizes*/
+
+@media screen and (max-width: 980px) {
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position:relative;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    footer h2, footer div {
+        text-align: center;
+        width: 100%;
+    }
+    .section {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+        justify-content: center;
+        position:relative;
+    }
+    .about-box1, .work-box1, .contact-box1 {
+        width: 100%;
+        border-right: none;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 575px) {  
+    .work-container {
+        padding-bottom: 0;
+        justify-content: center;
+        position:relative;
+    }
 }
